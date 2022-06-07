@@ -9,6 +9,7 @@ const student_obj = JSON.parse(students_json)
 const getLastId = () => {
     return student_obj[0].id + 1 
 }
+
 // Get all students
 const getAllStudent = (req, res) => {
     
