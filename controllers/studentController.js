@@ -37,7 +37,7 @@ const editStudent = (req, res) => {
 
     if ( student_obj.some(data => data.id == id)) {
         let index = student_obj.findIndex(data => data.id == id)
-        student_obj[index] = { ...req.body }
+        student_obj[index] = { id:id, ...req.body }
 
         fs.writeFileSync(path.join(__dirname, '../data/student.json'), JSON.stringify(student_obj))
         res.status(200).json({ message : 'Student edit successfully'})
