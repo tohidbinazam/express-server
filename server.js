@@ -8,7 +8,7 @@ const server_port = process.env.SERVER_PORT
 
 // Request body init
 app.use(express.json())
-// app.use(express.urlencoded({ extended : false }))
+app.use(express.urlencoded({ extended : false }))
 
 // Student route use
 app.use('/api/students', require('./routes/student'))
